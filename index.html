@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+<title>COVID-19 </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="csssecond.css"> 
+
+
+<script src="jsmain.js"></script>
+
+<body>
+ 
+  <div class="sidenav">
+      <a href="#"><div id="demo"><button type="button" onclick="loadDoc()">COVID FIN RAW DATA</button></div></a>
+      <a href="#"><div id="demo"><button type="button2" onclick="loadDoc2()">COVID SE RAW DATA</button></div></a>
+      <a href="#"><div id="demo"><button type="button4" onclick="loadDoc4()">COVID RU RAW DATA</button></div></a>
+      
+  </div>
+  
+  <div class="content">
+        <h2><strong>Covid-19 infoa</strong></h2>
+ 
+  <p>Paina nappia. Paluu F5 alkuun.</p>
+  <br>
+  
+  <button type="button" onclick="loadJSONDoc()">Tietoja eri maista</button>
+  <br>
+  
+    <div id="tabledata"></div>
+    <br>
+    
+    <div id="content"></div>
+
+<script>
+
+function loadDoc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xmlhttp.open("GET", "https://api.covid19api.com/dayone/country/finland", true);
+  xmlhttp.send();
+}
+function loadDoc2() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+      
+    }
+  };
+  xmlhttp.open("GET", "https://api.covid19api.com/dayone/country/sweden", true);
+  xmlhttp.send();
+}
+
+function loadDoc4() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xmlhttp.open("GET", "https://api.covid19api.com/dayone/country/russia", true);
+  xmlhttp.send();
+  
+}
+
+</script>
+
+</head>   
+
+</body>
+</html>
+
+
+  
+    
+   
