@@ -5,6 +5,34 @@
 <title>COVID-19 </title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.83.1">
+    <title>Sticky Footer Template · Bootstrap v5.0</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer/">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="tyyli.css">
+<script src="jsmain.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+
+<script
+   src="https://code.jquery.com/jquery-3.6.0.js"
+   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+   crossorigin="anonymous">
+
+  
+  </script>
+
+
+
+
+
+
 <link rel="stylesheet" href="csssecond.css"> 
 
 
@@ -14,12 +42,18 @@
 <script src="jsmain.js"></script>
 
 <body>
+
+
+ 
+
  
   <div class="sidenav">
       <a href="#"><div id="demo"><button type="button" onclick="loadDoc()">COVID FIN RAW DATA</button></div></a>
       <a href="#"><div id="demo"><button type="button2" onclick="loadDoc2()">COVID SE RAW DATA</button></div></a>
       <a href="#"><div id="demo"><button type="button4" onclick="loadDoc4()">COVID RU RAW DATA</button></div></a>
       
+    
+
   </div>
   
   <div class="content">
@@ -27,7 +61,14 @@
  
   <p>Paina nappia. Paluu F5 alkuun.</p>
   <br>
-  
+  <br>
+  <form action="http://oma-osoite.fi/api">
+    <input type="text" name="etunimi"/>
+    <input type="text" name="sukunimi"/>
+    <button type="submit">Lähetä</button>
+    </form>
+    <br>
+    <br>
   <button type="button" onclick="loadJSONDoc()">Tietoja eri maista</button>
   <br>
   
@@ -74,6 +115,9 @@ function loadDoc4() {
   xmlhttp.send();
   
 }
+
+
+
 
 </script>
 
