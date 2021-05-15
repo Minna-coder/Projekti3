@@ -13,30 +13,11 @@
 </head>
 <body>
 
-    <body>
- 
-        <div class="sidenav">
-            <a href="#"><div id="demo"><button type="button" onclick="loadDoc()">COVID FIN RAW DATA</button></div></a>
-            <a href="#"><div id="demo"><button type="button2" onclick="loadDoc2()">COVID SE RAW DATA</button></div></a>
-            <a href="#"><div id="demo"><button type="button4" onclick="loadDoc4()">COVID RU RAW DATA</button></div></a>
-            
-        </div>
-        
-        <div class="content">
-              <h2><strong>Covid-19 infoa</strong></h2>
-       
-        <p>Paina nappia. Paluu F5 alkuun.</p>
-        <br>
-        
-        <button type="button" onclick="loadJSONDoc()">Tietoja eri maista</button>
-        <br>
-        
-          <div id="tabledata"></div>
-          <br>
-          
-          <div id="content"></div>
+    <body>      
       
       <script>
+
+
       
       function loadDoc() {
         var xmlhttp = new XMLHttpRequest();
@@ -83,13 +64,8 @@
       </html>
 
 
-
-
-
-
-
 <div class="jumbotron text-center">
-  <h1>My First Bootstrap Page</h1>
+  <h1>Covid-19 tietoa</h1>
   <p>Resize this responsive page to see the effect!</p> 
 </div>
   
@@ -97,11 +73,29 @@
   <div class="row">
     <div class="col-sm-4">
       <h3>Column 1</h3>
+
+     
+
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
     </div>
     <div class="col-sm-4">
       <h3>Column 2</h3>
+
+      <div class="content">
+        <h2><strong>Covid-19 infoa</strong></h2>
+ 
+  <p>Paina nappia. Paluu F5 alkuun.</p>
+  <br>
+  
+  <button type="button" onclick="loadJSONDoc()">Tietoja eri maista</button>
+  <br>
+  
+    <div id="tabledata"></div>
+    <br>
+    
+    <div id="content"></div>
+
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
     </div>
