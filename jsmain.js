@@ -5,6 +5,17 @@ var jsonObj;
 
 function loadJSONDoc() {
 
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
 var url = "https://api.covid19api.com/summary";
 
 var xmlhttp = new XMLHttpRequest();
@@ -18,7 +29,7 @@ xmlhttp.onreadystatechange = function() {
 
 jsonObj = JSON.parse(xmlhttp.responseText);
 
-console.log(jsonObj);
+
 
 printJSONTable(jsonObj);
 
@@ -62,6 +73,12 @@ function printJSONTable(jsonObj) {
         out += '<td>' + data.Countries[76].TotalRecovered + '<td>';
         out += '<td>' + data.Countries[76].TotalDeaths + '<td>'; 
         out += '</tr>';
+        out += '<td>' + data.Countries[58].Country + '<td>';
+        out += '<td>' + data.Countries[58].TotalConfirmed + '<td>';
+        out += '<td>' + data.Countries[58].TotalRecovered + '<td>';
+        out += '<td>' + data.Countries[58].TotalDeaths + '<td>'; 
+
+
 
 	out+="</table>";
 
