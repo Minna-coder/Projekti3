@@ -4,94 +4,41 @@
   <title>Covid19api</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-  <script src="jsmain.js"></script>
+ 
+  <script src="jsmainkolmas.js"></script>
 </head>
 <body>
-
-    <body>      
-      
-      <script>
-
-
-      
-      function loadDoc() {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("demo").innerHTML =
-            this.responseText;
-          }
-        };
-        xmlhttp.open("GET", "https://api.covid19api.com/dayone/country/finland", true);
-        xmlhttp.send();
-      }
-      function loadDoc2() {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("demo").innerHTML =
-            this.responseText;
-            
-          }
-        };
-        xmlhttp.open("GET", "https://api.covid19api.com/dayone/country/sweden", true);
-        xmlhttp.send();
-      }
-      
-      function loadDoc4() {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-          if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("demo").innerHTML =
-            this.responseText;
-          }
-        };
-        xmlhttp.open("GET", "https://api.covid19api.com/dayone/country/russia", true);
-        xmlhttp.send();
-        
-      }
-      
-      </script>
-      
-      </head>   
-      
-      </body>
-      </html>
-
-
+     
 <div class="jumbotron text-center">
-  <h1>Covid-19 tietoa</h1>
-  <p>Resize this responsive page to see the effect!</p> 
+  <h3><strong>COVID-19</strong></h3>
+  <p>Täältä ajantasaista tietoa!</p> 
 </div>
   
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
-      <h3>Column 1</h3>
-
-     
-
+      <h1>Täältä löydät tietoja</h1>
+      <p>Täällä on listattu erimaiden koronatilanteet. Klikkaa ja katso.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
     </div>
     <div class="col-sm-4">
-      <h3>Column 2</h3>
+     
 
       <div class="content">
-        <h2><strong>Covid-19 infoa</strong></h2>
- 
-  <p>Paina nappia. Paluu F5 alkuun.</p>
+      
+  <p>Klikkaa alla olevaa nappia ja katso eri maiden tilanne. Paluun F5 tai refresh!</p>
   <br>
   
   <button type="button" onclick="loadJSONDoc()">Tietoja eri maista</button>
   <br>
   
-    <div id="tabledata"></div>
+  <div id="tabledata"></div>
     <br>
     
     <div id="content"></div>
@@ -99,11 +46,7 @@
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
     </div>
-    <div class="col-sm-4">
-      <h3>Column 3</h3>        
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-    </div>
+    
   </div>
 </div>
 
