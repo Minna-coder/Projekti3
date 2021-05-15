@@ -9,33 +9,78 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
- 
+  <link rel="stylesheet" href="csskolmas.css"> 
   <script src="jsmainkolmas.js"></script>
+
 </head>
 <body>
      
 <div class="jumbotron text-center">
   <h3><strong>COVID-19</strong></h3>
   <p>Täältä ajantasaista tietoa!</p> 
+  <p>Raakaa faktaa ja dataa!</p> 
+  <p>Tuoreimmat uutiset ja tilastot fataalista pandemiasta!</p>
+
+  <script> 
+    $(document).ready(function(){
+     
+    $('p').eq(0).slideDown('slow');
+
+    $('p').eq(0).slideUp('slow');
+
+    $('p').eq(0).fadeIn('slow');
+
+    $('p').eq(0).fadeOut('slow');
+      });
+    
+    </script>
+
 </div>
   
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
-      <h2>Tietoja</h2>
-      <p>Täällä on listattu erimaiden koronatilanteet. Klikkaa ja katso.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+    
+      <script> 
+        $(document).ready(function(){
+          $("#flip").click(function(){
+            $("#panel").slideDown("slow");
+          });
+        });
+        </script>
+        <style> 
+        #panel, #flip {
+          padding: 5px;
+          text-align: center;
+          background-color: #4CAF50;
+          border: solid 1px #035a47;
+         
+        }
+        
+        #panel {
+          padding: 50px;
+          display: none;
+        }
+        </style>
+        </head>
+        <body>
+         
+        <div id="flip">Uskallatko klikata?</div>
+        <div id="panel"><img src="covid3.jpg" alt="covidpanel"/></div>
+
+<br>
+     
     </div>
     <div class="col-sm-4">
      
 
       <div class="content">
       
-  <p>Klikkaa alla olevaa nappia ja katso eri maiden tilanne. Paluun F5 tai refresh!</p>
-  <br>
+ 
+
   
-  <button type="button" onclick="loadJSONDoc()">Tietoja eri maista</button>
+  
+  <button class="button" onclick="loadJSONDoc()">Paina ja palaa (F5)</button>
   <br>
   
   <div id="tabledata"></div>
@@ -45,7 +90,7 @@
     
       
     </div>
-    
+   
   </div>
 </div>
 <script
