@@ -2,17 +2,7 @@
 
 var jsonObj;
 
-
 function loadJSONDoc() {
-
-    
-    
-    
-    
-    
-    
-    
-
 
 
 
@@ -37,48 +27,39 @@ function printJSONTable(jsonObj) {
 
 	var data = jsonObj;
 	var out = "<table>";
-
-        out += '<tr>';
-        out += '<td>' + "<strong>Maa</strong>" + '<td>';
-        out += '<td>' + "<strong>Vahvistettuja</strong>" + '<td>';
-        out += '<td>' + "<strong>Parantunteita</strong>" + '<td>';
-        out += '<td>' + "<strong>Kuolleita</strong>" + '<td>'; 
-		out += '<tr>';
-		out += '<td>' + data.Countries[58].Country + '<td>';
-        out += '<td>' + data.Countries[58].TotalConfirmed + '<td>';
-        out += '<td>' + data.Countries[58].TotalRecovered + '<td>';
-        out += '<td>' + data.Countries[58].TotalDeaths + '<td>'; 
-        out += '</tr>';
-        out += '<tr>';
-        out += '<td>' + data.Countries[55].Country + '<td>';
-        out += '<td>' + data.Countries[55].TotalConfirmed + '<td>';
-        out += '<td>' + data.Countries[55].TotalRecovered + '<td>';
-        out += '<td>' + data.Countries[55].TotalDeaths + '<td>';
-		out += '</tr>';
-        out += '<tr>';
-        out += '<td>' + data.Countries[165].Country + '<td>';
-        out += '<td>' + data.Countries[165].TotalConfirmed + '<td>';
-        out += '<td>' + data.Countries[165].TotalRecovered + '<td>';
-        out += '<td>' + data.Countries[165].TotalDeaths + '<td>';
-		out += '</tr>';
-        out += '<tr>';
-		out += '<td>' + data.Countries[140].Country + '<td>';
-        out += '<td>' + data.Countries[140].TotalConfirmed + '<td>';
-        out += '<td>' + data.Countries[140].TotalRecovered + '<td>';
-        out += '<td>' + data.Countries[140].TotalDeaths + '<td>'; 
-        out += '</tr>';
-        out += '<tr>';
-		out += '<td>' + data.Countries[76].Country + '<td>';
-        out += '<td>' + data.Countries[76].TotalConfirmed + '<td>';
-        out += '<td>' + data.Countries[76].TotalRecovered + '<td>';
-        out += '<td>' + data.Countries[76].TotalDeaths + '<td>'; 
-        out += '</tr>';
-        out += '<td>' + data.Countries[58].Country + '<td>';
-        out += '<td>' + data.Countries[58].TotalConfirmed + '<td>';
-        out += '<td>' + data.Countries[58].TotalRecovered + '<td>';
-        out += '<td>' + data.Countries[58].TotalDeaths + '<td>'; 
+    out += '<tr>';
+    out += '<td>' + "<strong>Maa</strong>" + '<td>';
+    out += '<td>' + "<strong>Vahvistettuja</strong>" + '<td>';
+    out += '<td>' + "<strong>Parantunteita</strong>" + '<td>';
+    out += '<td>' + "<strong>Kuolleita</strong>" + '<td>'; 
+    out += '<tr>';
+    out += '<td>' + data.Countries[0].Country + '<td>';
+    out += '<td>' + data.Countries[0].TotalConfirmed + '<td>';
+    out += '<td>' + data.Countries[0].TotalRecovered + '<td>';
+    out += '<td>' + data.Countries[0].TotalDeaths + '<td>'; 
+    out += '</tr>';
+    out += '<tr>';
+    out += '<td>' + data.Countries[1].Country + '<td>';
+    out += '<td>' + data.Countries[1].TotalConfirmed + '<td>';
+    out += '<td>' + data.Countries[1].TotalRecovered + '<td>';
+    out += '<td>' + data.Countries[1].TotalDeaths + '<td>'; 
+    out += '</tr>';
+    out += '<tr>';
+    out += '<td>' + data.Countries[2].Country + '<td>';
+    out += '<td>' + data.Countries[2].TotalConfirmed + '<td>';
+    out += '<td>' + data.Countries[2].TotalRecovered + '<td>';
+    out += '<td>' + data.Countries[2].TotalDeaths + '<td>'; 
+    out += '</tr>';
+    out += '<tr>';
+    out += '<td>' + data.Countries[3].Country + '<td>';
+    out += '<td>' + data.Countries[3].TotalConfirmed + '<td>';
+    out += '<td>' + data.Countries[3].TotalRecovered + '<td>';
+    out += '<td>' + data.Countries[3].TotalDeaths + '<td>';
+    out += '</tr>';
+    out += '<tr>';
 
 
+ 
 
 	out+="</table>";
 
