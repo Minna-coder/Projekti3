@@ -1,132 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>Covid19api</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="csskolmas.css"> 
+  <script src="jsmainkolmas.js"></script>
   
-<title>COVID-19 </title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.83.1">
-    <title>Sticky Footer Template · Bootstrap v5.0</title>
+  <style>
+   
+    p.b {
+      font: italic bold 14px/32px Georgia, serif;
+    }
+    </style>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer/">
-    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<link rel="stylesheet" href="tyyli.css">
-<script src="jsmain.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-
-
-
-<script
-   src="https://code.jquery.com/jquery-3.6.0.js"
-   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-   crossorigin="anonymous">
-
-  
-  </script>
-
-
-
-
-
-
-<link rel="stylesheet" href="csssecond.css"> 
-
-
-
-
-
-<script src="maat.js"></script>
-
+</head>
 <body>
-
-
- 
-
- 
-  <div class="sidenav">
-      <a href="#"><div id="demo"><button type="button" onclick="loadDoc()">COVID FIN RAW DATA</button></div></a>
-      <a href="#"><div id="demo"><button type="button2" onclick="loadDoc2()">COVID SE RAW DATA</button></div></a>
-      <a href="#"><div id="demo"><button type="button4" onclick="loadDoc4()">COVID RU RAW DATA</button></div></a>
-      
-    
-
-  </div>
   
-  <div class="content">
-        <h2><strong>Covid-19 infoa</strong></h2>
- 
-  <p>Paina nappia. Paluu F5 alkuun.</p>
-  <br>
-  <br>
-  <form action="http://oma-osoite.fi/api">
-    <input type="text" name="etunimi"/>
-    <input type="text" name="sukunimi"/>
-    <button type="submit">Lähetä</button>
-    </form>
-    <br>
-    <br>
-  <button type="button" onclick="loadJSONDoc()">Tietoja eri maista</button>
+<div class="jumbotron text-center">
+  <h1 style="background-color:#4CAF50;">COVID-19 INFOA</h1>
+  <h3><strong>Kaikki Covidista!</strong></h3>
+  <p>Täältä ajantasaista tietoa!</p> 
+  <p class="b">Dataa ja faktaa globaalisti!</p> 
+  <p>Tuoreimmat uutiset ja tilastot fataalista pandemiasta!</p>
+
+  <script> 
+    $(document).ready(function(){
+     
+    $('p').eq(0).slideDown('slow');
+
+    $('p').eq(0).slideUp('slow');
+
+    $('p').eq(0).fadeIn('slow');
+
+    $('p').eq(0).fadeOut('slow');
+      });
+    
+    </script>
+
+<p>
+        
+  <button onclick="myFunction()"><strong>Päivämäärä ja lukemat Suomessa</strong></button>
+    <script>
+    var d = new Date();
+    function myFunction()
+    {
+      alert("Covid-19 tartuntoja on tavattu tänään " + d + " xx tapausta Suomessa.");
+     
+    } 
+    </script> 
+    
+</p>
+<p>Minna Mikkola ©</p>
+
+</div>
+  
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+    
+      <script> 
+        $(document).ready(function(){
+          $("#flip").click(function(){
+            $("#panel").slideDown("slow");
+          });
+        });
+        </script>
+        <style> 
+        #panel, #flip {
+          padding: 5px;
+          text-align: center;
+          background-color: #4CAF50;
+          border: solid 1px #484b48;
+         
+        }
+        
+        #panel {
+          padding: 50px;
+          display: none;
+        }
+        </style>
+       
+        <body>
+         
+        <div id="flip">Oletko nähnyt tätä?</div>
+
+        <div id="panel"><img src="covid3.jpg" alt="covidpanel"/></div>
+    
+<br>
+
+</div>
+
+    <div class="col-sm-8">
+     
+
+      <div class="content">
+  
+  <button class="button" onclick="loadJSONDoc()">Katso maakohtaiset tilastot!</button>
   <br>
   
   <div id="tabledata"></div>
     <br>
     
     <div id="content"></div>
-
-<script>
-
-function loadDoc() {
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML =
-      this.responseText;
-    }
-  };
-  xmlhttp.open("GET", "https://api.covid19api.com/dayone/country/finland", true);
-  xmlhttp.send();
-}
-function loadDoc2() {
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML =
-      this.responseText;
-      
-    }
-  };
-  xmlhttp.open("GET", "https://api.covid19api.com/dayone/country/sweden", true);
-  xmlhttp.send();
-}
-
-function loadDoc4() {
-  var xmlhttp = new XMLHttpRequest();
-  xmlhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML =
-      this.responseText;
-    }
-  };
-  xmlhttp.open("GET", "https://api.covid19api.com/dayone/country/russia", true);
-  xmlhttp.send();
-  
-}
-
-
-
-
-</script>
-
-</head>   
-
+    
+  </div>
+</div>
+<script
+   src="https://code.jquery.com/jquery-3.6.0.js"
+   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+   crossorigin="anonymous"></script>
+ 
 </body>
 </html>
-
-
-  
-    
-   
