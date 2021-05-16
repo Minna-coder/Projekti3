@@ -1,8 +1,6 @@
 /*jsmainkolmas.js */
 
-
 var jsonObj;
-
 
 function loadJSONDoc() {
 
