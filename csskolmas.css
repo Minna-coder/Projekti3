@@ -18,8 +18,12 @@
         margin: 4px 2px;
         cursor: pointer;
       }
-    
-    
+      p.b {       
+      text-align: center;
+      text-transform: capitalize;
+      color: #327c34;
+      font-style: italic;
+      }
     
 
    

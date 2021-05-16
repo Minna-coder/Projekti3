@@ -11,14 +11,22 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="csskolmas.css"> 
   <script src="jsmainkolmas.js"></script>
+  
+  <style>
+   
+    p.b {
+      font: italic bold 14px/32px Georgia, serif;
+    }
+    </style>
 
 </head>
 <body>
-     
+  
 <div class="jumbotron text-center">
-  <h3><strong>COVID-19</strong></h3>
+  <h1 style="background-color:#4CAF50;">COVID-19 INFOA</h1>
+  <h3><strong>Kaikki Covidista!</strong></h3>
   <p>Täältä ajantasaista tietoa!</p> 
-  <p>Raakaa faktaa ja dataa!</p> 
+  <p class="b">Dataa ja faktaa globaalisti!</p> 
   <p>Tuoreimmat uutiset ja tilastot fataalista pandemiasta!</p>
 
   <script> 
@@ -35,11 +43,26 @@
     
     </script>
 
+<p>
+        
+  <button onclick="myFunction()"><strong>Päivämäärä ja lukemat Suomessa</strong></button>
+    <script>
+    var d = new Date();
+    function myFunction()
+    {
+      alert("Covid-19 tartuntoja on tavattu tänään " + d + " xx tapausta Suomessa.");
+     
+    } 
+    </script> 
+    
+</p>
+<p>Minna Mikkola ©</p>
+
 </div>
   
 <div class="container">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-6">
     
       <script> 
         $(document).ready(function(){
@@ -53,7 +76,7 @@
           padding: 5px;
           text-align: center;
           background-color: #4CAF50;
-          border: solid 1px #035a47;
+          border: solid 1px #4CAF50;
          
         }
         
@@ -65,22 +88,25 @@
         </head>
         <body>
          
-        <div id="flip">Uskallatko klikata?</div>
-        <div id="panel"><img src="covid3.jpg" alt="covidpanel"/></div>
+        <div id="flip">Oletko nähnyt tätä?</div>
 
+
+
+
+
+
+        <div id="panel"><img src="covid3.jpg" alt="covidpanel"/></div>
+    
 <br>
-     
-    </div>
-    <div class="col-sm-4">
+
+</div>
+
+    <div class="col-sm-8">
      
 
       <div class="content">
-      
- 
-
   
-  
-  <button class="button" onclick="loadJSONDoc()">Katso tietoja täältä!</button>
+  <button class="button" onclick="loadJSONDoc()">Katso maakohtaiset tilastot!</button>
   <br>
   
   <div id="tabledata"></div>
@@ -88,8 +114,6 @@
     
     <div id="content"></div>
     
-      
-    </div>
    
   </div>
 </div>
@@ -98,5 +122,8 @@
    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
    crossorigin="anonymous"></script>
 
+
+  
+ 
 </body>
 </html>
